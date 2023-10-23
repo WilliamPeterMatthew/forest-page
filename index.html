@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>加油种树吧！</title>
+    <style>
+      .disappear {
+        display: none !important;
+      }
+      .overlay-fadeout {
+        opacity: 0 !important;
+      }
+      .forit-overlay {
+        font-family: 'PingFangTC-Regular', 'PingFangHK-Regular', 'PingFangSC-Regular', 'Helvetica',
+        'Microsoft JhengHei', 'Microsoft YaHei', 'MS Gothic', 'Malgun Gothic', 'Arial', 'sans-serif';
+        z-index: 2147483000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        text-align: center;
+        display: flex;
+        background-color: #000d;
+        transition: opacity 0.3s;
+        user-select: none;
+        align-items: center;
+      }
+      .forit-buttons {
+        transition: transform 0.1s;
+        cursor: pointer;
+        image-rendering: crisp-edges;
+      }
+      .forit-block-body {
+        overflow: hidden;
+        height: 100%;
+      }
+      .forit-info-container {
+        height: 500px;
+        width: 100%;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: -10vh;
+      }
+      .forit-overlay-top-text {
+        font-size: 32px;
+      }
+      .forit-tree-ball {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background-size: contain;
+      }
+      .forit-tree {
+        position: absolute;
+        margin: 0 auto;
+        top: 12px;
+        left: 31px;
+        width: 88px;
+        height: 88px;
+        background-size: contain;
+      }
+      .forit-overlay-bottom-text {
+        font-size: 64px;
+      }
+      .forit-giveup-button {
+        border: 1px;
+        border-radius: 5px;
+        font-size: 16px;
+        line-height: 21px;
+        padding: 6px;
+        color: rgba(255,255,255,0);
+      }
+      .forit-popup {
+        position: absolute;
+        padding: 24px;
+        border-radius: 5px;
+        background-color: #fff;
+        color: #333;
+        transition: opacity 0.3s;
+        opacity: 1;
+      }
+      .forit-popup-shrink {
+        opacity: 0 !important;
+      }
+      .forit-popup-title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+      }
+      .forit-popup-message {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 9px;
+      }
+      .dialog-buttons {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 24px;
+      }
+      .forit-popup-confirm-button,
+      .forit-popup-cancel-button {
+        background-color: #51a387;
+        font-weight: bold;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        width: 80px;
+        font-size: 16px;
+        padding: 6px;
+      }
+      .forit-popup-mask {
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: #000a;
+        transition: opacity 0.3s;
+        opacity: 0;
+      }
+      .forit-popup-masked {
+        opacity: 1;
+      }
+    </style>
+    <style id="forit-body-lock-style">.forit-body-lock { overflow: hidden !important; }</style>
+  </head>
+  <body class="forit-body-lock" style="zoom: 1;">
+    <div id="forit-content-host">
+    <div id="forit-overlay" class="forit-overlay">
+      <div id="forit-info-container" class="forit-info-container">
+      <span id="forit-overlay-top-text" class="forit-overlay-top-text">点击右上角开始种树吧！</span>
+      <div id="forit-tree-ball" class="forit-tree-ball" style="background-image: url(./images/main/planting_circle.svg);">
+        <div id="forit-tree" class="forit-tree" style="background-image: url(./images/trees/tree1/tree_default_1.png);"></div>
+      </div>
+      <span id="forit-overlay-bottom-text" class="forit-overlay-bottom-text">START NOW!</span>
+      <span class="forit-giveup-button">.</span>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>
